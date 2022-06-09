@@ -30,6 +30,7 @@ ul{
 }
 body{
   font-family: "Poppins", Helvetica, Arial, sans-serif;
+  color: var(--background-color);
 }
 a{
   text-decoration: none;
