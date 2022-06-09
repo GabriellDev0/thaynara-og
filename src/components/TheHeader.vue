@@ -3,7 +3,7 @@
         
         <img class='header_logotipo' width="153" height="16" src="@/assets/thaynara-og.svg" alt="Logo tipo do site, escrito Thaynara OG em uma cor rosa choque">
 
-        <img class="header_picture_thay" src="@/assets/contato-foto.jpg" alt="Imagem da Thaynara bem vestida sentada em uma calçada mostrando todo o seu look com o cotovelo apoiado no joelho e a mão apoiada no queixo">
+        <img width="373" height="722" class="header_picture_thay" src="@/assets/contato-foto.jpg" alt="Imagem da Thaynara bem vestida sentada em uma calçada mostrando todo o seu look com o cotovelo apoiado no joelho e a mão apoiada no queixo">
         <social-icons colorIcons="#FFDADA"></social-icons>  
     </header>
 </template>
