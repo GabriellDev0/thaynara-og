@@ -24,12 +24,18 @@
             <textarea class="textarea_subject" id="subject" name="subject" placeholder="Digite aqui.." required></textarea>
 
             <div class="form_submit">
-                <VueRecaptcha 
-                    :sitekey="siteKey" 
+                <vueRecaptcha
+                    v-show="showRecaptcha" 
+                    sitekey="6Ldhpl4gAAAAADLupRB5P0G3Ouc4gRN0up7tjRb5"
+                    size="normal"
+                    theme="light"
+                    hl="tr" 
                     :load-recaptcha-script="true" 
-                    @verify="handleSuccess" 
-                    @error="handleError" 
-                ></VueRecaptcha> 
+                    @verify="recaptchaVerified"
+                    @expire="recaptchaExpired" 
+                    @error="recaptchaFailed"
+                    ref="vueRecaptcha">
+                </vueRecaptcha> 
                 <!-- <div class="g-recaptcha" data-callback="" data-sitekey="6Ldhpl4gAAAAADLupRB5P0G3Ouc4gRN0up7tjRb5"></div>  -->
                 <button id="submit" type="submit" class="form_btn_submit">Enviar</button>
             </div>
@@ -38,34 +44,33 @@
 </template>
 
 <script>
-import { computed, defineComponent } from 'vue';
-import { VueRecaptcha } from 'vue-recaptcha';
-
-export default defineComponent({
-  name: 'ContactForm',
-  components: {
-    VueRecaptcha
-  },
-  setup() {
-    const siteKey = computed(() => {
-      return '6Ldhpl4gAAAAADLupRB5P0G3Ouc4gRN0up7tjRb5';
-    });
-
-    const handleError = () => {
-      window.alert("Erro")
-    };
-
-    const handleSuccess = (response) => {
-        window.alert(response)
-    };
-
-    return {
-      handleSuccess,
-      handleError,
-      siteKey,
-    };
-  }
-});
+import vueRecaptcha from 'vue3-recaptcha2';
+export default {
+    name: "ContactForm",
+    components:{
+        vueRecaptcha 
+    },
+    data(){
+        return{
+            showRecaptcha: false
+        }
+    },
+    methods:{
+        recaptchaVerified(response){
+            if(response.length == 0){
+                console.log('Erro')
+            }else{
+                console.log('Foi')
+            }
+        },
+        recaptchaExpired(){
+            this.$refs.vueRecaptcha.reset();
+        },
+        recaptchaFailed(){
+            
+        }
+    }
+}
 </script>
 
 <style scoped>
