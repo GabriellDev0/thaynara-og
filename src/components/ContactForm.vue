@@ -52,7 +52,7 @@ export default {
     data(){
         return{
             showRecaptcha: true,
-            isDisabled: false
+            isDisabled: true
         }
     },
     methods:{
@@ -60,7 +60,7 @@ export default {
             if(response.length == 0){
                 console.log('Erro')
             }else{
-                this.isDisabled = true;
+                this.isDisabled = false;
             }
         },
         recaptchaExpired(){
@@ -156,13 +156,17 @@ input[type=number]{
     background-color: var(--secundary-color);
     color: var(--background-color);
     font-size: var(--font-sizeM);
-    transition: 0.3s;
+    transition: all 0.3s;
     font-family: inherit;
     position: relative;
 }
 
 .form_btn_submit:hover{
     transform: scale(1.1);
+}
+.form_btn_submit:disabled{
+    opacity: 0.5;
+    background-color: var(--terciary-color);
 }
 
 .form_btn_submit::after{
@@ -174,34 +178,5 @@ input[type=number]{
     top: 16px;
     right: 15px;
 }
-
-/* .form_submit_not_robot{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
-    font-size: 0.875rem;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding: 10px 30px;
-    background-color: #F5F5F5;
-    border-radius: 5px; 
-}
-
-.form_submit_not_robot input{
-    opacity: 1;
-    cursor: pointer;
-    height: 20px;
-    width: 20px;
-} */
-
-
-
-
-
-
-
 
 </style>
