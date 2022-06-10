@@ -52,7 +52,7 @@ export default {
     },
     data(){
         return{
-            showRecaptcha: false
+            showRecaptcha: true
         }
     },
     methods:{
