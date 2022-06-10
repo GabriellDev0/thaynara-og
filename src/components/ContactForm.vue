@@ -24,11 +24,7 @@
             <textarea class="textarea_subject" id="subject" name="subject" placeholder="Digite aqui.." required></textarea>
 
             <div class="form_submit">
-                <label class="form_submit_not_robot">
-                    <input type="checkbox" class="form_submit_not_robot_checkbox"> 
-                    Não sou um robô 
-                    <div class="g-recaptcha" data-sitekey="6Ldhpl4gAAAAADLupRB5P0G3Ouc4gRN0up7tjRb5"></div> 
-                </label>
+                <div class="g-recaptcha" data-sitekey="6Ldhpl4gAAAAADLupRB5P0G3Ouc4gRN0up7tjRb5"></div> 
                 <button type="submit" class="form_btn_submit">Enviar</button>
             </div>
                 
@@ -43,9 +39,6 @@ export default {
             selected: null,
         }
     },
-    onloadCallback(){
-        alert("grecaptcha is ready!");
-    }
 }
 </script>
 
@@ -151,7 +144,7 @@ input[type=number]{
     right: 15px;
 }
 
-.form_submit_not_robot{
+/* .form_submit_not_robot{
     display: flex;
     align-items: center;
     gap: 5px;
@@ -171,7 +164,7 @@ input[type=number]{
     cursor: pointer;
     height: 20px;
     width: 20px;
-}
+} */
 
 
 
