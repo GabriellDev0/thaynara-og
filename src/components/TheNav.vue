@@ -2,31 +2,31 @@
     <nav class="navBar">
             <ul class="navBar_list">
                 <li class="navBar_list_item">
-                    <router-link to="/">Sobre</router-link>
+                    <router-link to="/sobre">Sobre</router-link>
                 </li>
                 <li class="navBar_list_item">
-                    <router-link to="/">Novidades</router-link>
+                    <router-link to="/novidades">Novidades</router-link>
                 </li>
                 <li class="navBar_list_item">
-                    <router-link to="/">Agenda</router-link>
+                    <router-link to="/agenda">Agenda</router-link>
                 </li>
                 <li class="navBar_list_item">
-                    <router-link to="/">Thay e Unicef</router-link>
+                    <router-link to="/thay-e-unicef">Thay e Unicef</router-link>
                 </li>
                 <li class="navBar_list_item">
-                    <router-link to="/">Galeria</router-link>
+                    <router-link to="/galeria">Galeria</router-link>
                 </li>
                 <li class="navBar_list_item">
-                    <router-link to="/">São João da Thay</router-link>
+                    <router-link to="/sao-joao-da-thay">São João da Thay</router-link>
                 </li>
                 <li class="navBar_list_item">
                     <router-link to="/">Contato</router-link>
                 </li>
                 <li class="navBar_list_item">
-                    <router-link to="/">Imprensa</router-link>
+                    <router-link to="/imprensa">Imprensa</router-link>
                 </li>
                 <li class="navBar_list_item">
-                    <router-link to="/">Fã-Clubes</router-link>
+                    <router-link to="/fa-clubes">Fã-Clubes</router-link>
                 </li>
             </ul>
         </nav>

@@ -2,7 +2,11 @@
   <div class="content_site">
     <TheHeader/>
     <main class="content_main">
-      <router-view/>
+      <router-view v-slot="{ Component }">
+          <transition mode="out-in">
+            <component :is="Component" />
+          </transition>
+        </router-view>
       <TheNav/>
     </main>
   </div>
@@ -57,10 +61,36 @@ body{
 a{
   text-decoration: none;
   color: var(--primary-color);
+  position: relative;
 }
 img{
   max-width: 100%;
   display: block;
+}
+
+.router-link-exact-active::before{
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: var(--secundary-color);
+    right: 0px;
+    bottom: -5px;
+}
+
+.v-enter-from,
+.v-leave-to{
+    opacity: 0;
+}
+.v-enter-from{
+    transform: translate3d(0,-20px,0);
+}
+.v-leave-to{
+    transform: translate3d(0,20px,0);
+}
+.v-enter-active,
+.v-leave-active{
+  transition: all .3s;
 }
 
 .content_site{
