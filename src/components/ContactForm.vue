@@ -27,7 +27,7 @@
                 <label class="form_submit_not_robot">
                     <input type="checkbox" class="form_submit_not_robot_checkbox"> 
                     Não sou um robô 
-                    <div class="g-recaptcha" data-sitekey="6LcbRlwgAAAAACZIeBQ5QKcdnS8hR85VI-eWZzDG"></div> 
+                    <div class="g-recaptcha" data-sitekey="6Ldhpl4gAAAAADLupRB5P0G3Ouc4gRN0up7tjRb5"></div> 
                 </label>
                 <button type="submit" class="form_btn_submit">Enviar</button>
             </div>
