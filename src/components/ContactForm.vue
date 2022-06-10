@@ -36,7 +36,7 @@
                     ref="vueRecaptcha">
                 </vueRecaptcha> 
                 <!-- <div class="g-recaptcha" data-callback="" data-sitekey="6Ldhpl4gAAAAADLupRB5P0G3Ouc4gRN0up7tjRb5"></div>  -->
-                <button id="submit" type="submit" class="form_btn_submit">Enviar</button>
+                <button id="submit" type="submit" :disabled='isDisabled' class="form_btn_submit">Enviar</button>
             </div>
                 
         </form>
@@ -51,7 +51,8 @@ export default {
     },
     data(){
         return{
-            showRecaptcha: true
+            showRecaptcha: true,
+            isDisabled: false
         }
     },
     methods:{
@@ -59,7 +60,7 @@ export default {
             if(response.length == 0){
                 console.log('Erro')
             }else{
-                console.log('Foi')
+                this.isDisabled = true;
             }
         },
         recaptchaExpired(){
