@@ -1,5 +1,5 @@
 <template>
-    <form class="contact_page_form" action="?" method="POST">
+    <form class="contact_page_form" id="contact_page_form" action="?" method="POST">
             <label class="select_type_label" for="typeContact">Seu contato é relacionado a:</label>
             <select v-model="selected" class="select_type" id="typeContact" name="typeContact">
                 <option value="imprensa">Imprensa</option>
@@ -24,22 +24,48 @@
             <textarea class="textarea_subject" id="subject" name="subject" placeholder="Digite aqui.." required></textarea>
 
             <div class="form_submit">
-                <div class="g-recaptcha" data-sitekey="6Ldhpl4gAAAAADLupRB5P0G3Ouc4gRN0up7tjRb5"></div> 
-                <button type="submit" class="form_btn_submit">Enviar</button>
+                <VueRecaptcha 
+                    :sitekey="siteKey" 
+                    :load-recaptcha-script="true" 
+                    @verify="handleSuccess" 
+                    @error="handleError" 
+                ></VueRecaptcha> 
+                <!-- <div class="g-recaptcha" data-callback="" data-sitekey="6Ldhpl4gAAAAADLupRB5P0G3Ouc4gRN0up7tjRb5"></div>  -->
+                <button id="submit" type="submit" class="form_btn_submit">Enviar</button>
             </div>
                 
         </form>
 </template>
 
 <script>
-export default {
-    name: "ContactForm",
-    data(){
-        return{
-            selected: null,
-        }
-    },
-}
+import { computed, defineComponent } from 'vue';
+import { VueRecaptcha } from 'vue-recaptcha';
+
+export default defineComponent({
+  name: 'ContactForm',
+  components: {
+    VueRecaptcha
+  },
+  setup() {
+    const siteKey = computed(() => {
+      return '6Ldhpl4gAAAAADLupRB5P0G3Ouc4gRN0up7tjRb5';
+    });
+
+    const handleError = () => {
+      window.alert("Erro")
+    };
+
+    const handleSuccess = (response) => {
+        window.alert(response)
+    };
+
+    return {
+      handleSuccess,
+      handleError,
+      siteKey,
+    };
+  }
+});
 </script>
 
 <style scoped>
