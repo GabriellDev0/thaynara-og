@@ -41,6 +41,7 @@ export default {
 <style>
 .navBar{
     justify-self: flex-end;
+    grid-column: 2;
 }
 
 .navBar_list{

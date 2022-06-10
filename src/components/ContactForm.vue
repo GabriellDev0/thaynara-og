@@ -1,6 +1,6 @@
 <template>
     <form class="contact_page_form">
-            <label for="typeContact">Seu contato é relacionado a:</label>
+            <label  class="select_type_label" for="typeContact">Seu contato é relacionado a:</label>
             <select class="select_type" id="typeContact" name="typeContact">
                 <option value="imprensa">Imprensa</option>
                 <option value="divulgacao">Divulgação</option>
@@ -25,7 +25,7 @@
 
             <div class="form_submit">
                 <label class="form_submit_not_robot">
-                    <input type="checkbox" class="form_submit_not_robot_checkbox" checked="checked"> 
+                    <input type="checkbox" class="form_submit_not_robot_checkbox"> 
                     Não sou um robô  
                 </label>
                 <button class="form_btn_submit">Enviar</button>
@@ -70,10 +70,20 @@ input::placeholder{
 .select_type{
     font-family: "Poppins", Helvetica, Arial, sans-serif;
     padding: 15px;
-    outline-color: var(--terciary-color);
+    border-color: var(--terciary-color);
     appearance: none; 
     position: relative;
     border-radius: 10px;
+}
+
+.contact_page_form::after{
+    content: '';
+    position: absolute;
+    width: 17px;
+    height: 10px;
+    background: url("@/assets/setaDropDown.svg") no-repeat;
+    right: 30px;
+    top: 45px;
 }
 
 
@@ -92,7 +102,7 @@ input[type=number]{
 }
 
 .textarea_subject{
-    outline-color: var(--terciary-color);
+    border-color: var(--terciary-color);
     resize: none;
     padding: 10px;
     height: 100px;
@@ -115,9 +125,21 @@ input[type=number]{
     font-size: var(--font-sizeM);
     transition: 0.3s;
     font-family: inherit;
+    position: relative;
 }
+
 .form_btn_submit:hover{
     transform: scale(1.1);
+}
+
+.form_btn_submit::after{
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 18px;
+    background: url("@/assets/icon-enviar.svg") no-repeat;
+    top: 16px;
+    right: 15px;
 }
 
 .form_submit_not_robot{
@@ -141,6 +163,8 @@ input[type=number]{
     height: 20px;
     width: 20px;
 }
+
+
 
 
 
