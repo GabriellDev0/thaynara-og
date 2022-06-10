@@ -65,9 +65,10 @@ export default {
         },
         recaptchaExpired(){
             this.$refs.vueRecaptcha.reset();
+            this.isDisabled = true;
         },
         recaptchaFailed(){
-            
+            this.isDisabled = true;
         }
     }
 }
