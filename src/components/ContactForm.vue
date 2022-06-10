@@ -29,7 +29,6 @@
                     sitekey="6Ldhpl4gAAAAADLupRB5P0G3Ouc4gRN0up7tjRb5"
                     size="normal"
                     theme="light"
-                    hl="tr" 
                     :load-recaptcha-script="true" 
                     @verify="recaptchaVerified"
                     @expire="recaptchaExpired" 
