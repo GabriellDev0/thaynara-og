@@ -21,12 +21,13 @@
           
 
             <label class="label_subject" for="subject">Mensagem</label>
-            <textarea class="textarea_subject" id="subject" name="subject" placeholder="Digite aqui.." style="height:100px; width: 300px" required></textarea>
+            <textarea class="textarea_subject" id="subject" name="subject" placeholder="Digite aqui.." required></textarea>
 
             <div class="form_submit">
-                <div class="form_submit_not_robot">
-                    <p>Não sou um robô</p>
-                </div>
+                <label class="form_submit_not_robot">
+                    <input type="checkbox" class="form_submit_not_robot_checkbox" checked="checked"> 
+                    Não sou um robô  
+                </label>
                 <button class="form_btn_submit">Enviar</button>
             </div>
                 
@@ -67,17 +68,14 @@ input::placeholder{
     font-weight: var(--font-light);
 }
 .select_type{
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
     padding: 15px;
     outline-color: var(--terciary-color);
     appearance: none; 
     position: relative;
+    border-radius: 10px;
 }
 
-.select_type::before{
-    content: 'asaassasa';
-    position: absolute;
-    background-color: red;
-}
 
 .label_subject{
     padding-top: 30px;      
@@ -93,15 +91,57 @@ input[type=number]{
     -moz-appearance: textfield;
 }
 
- 
-    
-
-
 .textarea_subject{
     outline-color: var(--terciary-color);
     resize: none;
     padding: 10px;
+    height: 100px;
 }
+
+.form_submit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.form_btn_submit{
+    border-radius: 5px;
+    border: none;
+    padding: 10px 60px;
+    cursor: pointer;
+    background-color: var(--secundary-color);
+    color: var(--background-color);
+    font-size: var(--font-sizeM);
+    transition: 0.3s;
+    font-family: inherit;
+}
+.form_btn_submit:hover{
+    transform: scale(1.1);
+}
+
+.form_submit_not_robot{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 10px 30px;
+    background-color: #F5F5F5;
+    border-radius: 5px; 
+}
+
+.form_submit_not_robot input{
+    opacity: 1;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
 
 
 

@@ -1,6 +1,24 @@
 <template>
-  <router-view/>
+  <div class="content_site">
+    <TheHeader/>
+    <main class="content_main">
+      <router-view/>
+      <TheNav/>
+    </main>
+  </div>
+   
 </template>
+
+<script>
+import TheHeader from "@/components/TheHeader.vue"
+import TheNav from "@/components/TheNav.vue"
+export default {
+    components:{
+      TheHeader,
+      TheNav
+    }
+}
+</script>
 
 <style>
 :root{
@@ -22,7 +40,6 @@
   
 }
 
-
 *{
   box-sizing: border-box;
 }
@@ -39,10 +56,20 @@ body{
 }
 a{
   text-decoration: none;
+  color: var(--primary-color);
 }
 img{
   max-width: 100%;
   display: block;
+}
+
+.content_site{
+    max-width: 1920px;
+}
+
+.content_main{
+  display: grid;
+  grid-template-columns: 1fr 250px;
 }
 
 </style>
