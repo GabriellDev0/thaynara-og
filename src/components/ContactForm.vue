@@ -1,7 +1,7 @@
 <template>
-    <form class="contact_page_form">
-            <label  class="select_type_label" for="typeContact">Seu contato é relacionado a:</label>
-            <select class="select_type" id="typeContact" name="typeContact">
+    <form class="contact_page_form" action="?" method="POST">
+            <label class="select_type_label" for="typeContact">Seu contato é relacionado a:</label>
+            <select v-model="selected" class="select_type" id="typeContact" name="typeContact">
                 <option value="imprensa">Imprensa</option>
                 <option value="divulgacao">Divulgação</option>
                 <option value="parceria">Parceria</option>
@@ -26,9 +26,10 @@
             <div class="form_submit">
                 <label class="form_submit_not_robot">
                     <input type="checkbox" class="form_submit_not_robot_checkbox"> 
-                    Não sou um robô  
+                    Não sou um robô 
+                    <div class="g-recaptcha" data-sitekey="6LcbRlwgAAAAACZIeBQ5QKcdnS8hR85VI-eWZzDG"></div> 
                 </label>
-                <button class="form_btn_submit">Enviar</button>
+                <button type="submit" class="form_btn_submit">Enviar</button>
             </div>
                 
         </form>
@@ -36,7 +37,15 @@
 
 <script>
 export default {
-
+    name: "ContactForm",
+    data(){
+        return{
+            selected: null,
+        }
+    },
+    onloadCallback(){
+        alert("grecaptcha is ready!");
+    }
 }
 </script>
 
