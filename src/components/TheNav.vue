@@ -1,0 +1,63 @@
+<template>
+    <nav class="navBar">
+            <ul class="navBar_list">
+                <li class="navBar_list_item">
+                    <router-link to="/">Sobre</router-link>
+                </li>
+                <li class="navBar_list_item">
+                    <router-link to="/">Novidades</router-link>
+                </li>
+                <li class="navBar_list_item">
+                    <router-link to="/">Agenda</router-link>
+                </li>
+                <li class="navBar_list_item">
+                    <router-link to="/">Thay e Unicef</router-link>
+                </li>
+                <li class="navBar_list_item">
+                    <router-link to="/">Galeria</router-link>
+                </li>
+                <li class="navBar_list_item">
+                    <router-link to="/">São João da Thay</router-link>
+                </li>
+                <li class="navBar_list_item">
+                    <router-link to="/">Contato</router-link>
+                </li>
+                <li class="navBar_list_item">
+                    <router-link to="/">Imprensa</router-link>
+                </li>
+                <li class="navBar_list_item">
+                    <router-link to="/">Fã-Clubes</router-link>
+                </li>
+            </ul>
+        </nav>
+</template>
+
+<script>
+export default {
+    Name: "TheNav"
+}
+</script>
+
+<style>
+.navBar{
+    justify-self: flex-end;
+}
+
+.navBar_list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: end;
+    margin-right: 60px;
+}
+
+.navBar_list_item{
+    font-size: var(--font-sizeM);
+    font-weight: var(--font-regular);
+    transition: 0.3s;
+}
+
+.navBar_list_item:hover{
+    transform: scale(1.2);
+}
+</style>
