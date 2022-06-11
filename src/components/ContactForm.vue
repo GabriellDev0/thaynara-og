@@ -38,7 +38,7 @@
                     ref="vueRecaptcha">
                 </vueRecaptcha> 
                 <!-- <div class="g-recaptcha" data-callback="" data-sitekey="6Ldhpl4gAAAAADLupRB5P0G3Ouc4gRN0up7tjRb5"></div>  -->
-                <button id="submit" type="submit" @click="addFormToFirebase" :disabled='isDisabled' class="form_btn_submit">Enviar</button>
+                <button id="submit" type="submit" :disabled='isDisabled' class="form_btn_submit">Enviar</button>
             </div>
             
         </form>
