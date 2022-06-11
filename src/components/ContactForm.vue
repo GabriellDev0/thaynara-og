@@ -3,27 +3,27 @@
 
 
             <label class="contact_type_label" for="contact_type">Seu contato é relacionado a:</label>
-            <select class="contact_type" name="contact_type" v-model="contact_type">
+            <select class="contact_type" name="contact_type" v-model="form.contact_type">
                 <option value="imprensa">Imprensa</option>
                 <option value="divulgacao">Divulgação</option>
                 <option value="parceria">Parceria</option>
             </select>
 
 
-            <input class="input_name" type="text" id="name" name="name" v-model="name" placeholder="Nome" required>
+            <input class="input_name" type="text" id="name" name="name" v-model="form.name" placeholder="Nome" required>
 
             
-            <input class="input_company" type="text" id="company" name="company" v-model="company" placeholder="Empresa" required>
+            <input class="input_company" type="text" id="company" name="company" v-model="form.company" placeholder="Empresa" required>
 
             
-            <input class="input_email" type="email" id="email" name="email" v-model="email" placeholder="E-mail" required>
+            <input class="input_email" type="email" id="email" name="email" v-model="form.email" placeholder="E-mail" required>
 
             
-            <input class="input_telephone" type="number" id="telephone" name="telephone" v-model="telephone"  placeholder="Telefone" required>
+            <input class="input_telephone" type="number" id="telephone" name="telephone" v-model="form.telephone"  placeholder="Telefone" required>
           
 
             <label class="label_message" for="message">Mensagem</label>
-            <textarea class="textarea_message" id="message" name="message" v-model="message" placeholder="Digite aqui.." required></textarea>
+            <textarea class="textarea_message" id="message" name="message" v-model="form.message" placeholder="Digite aqui.." required></textarea>
 
             <div class="form_submit">
                 <vueRecaptcha
@@ -38,14 +38,18 @@
                     ref="vueRecaptcha">
                 </vueRecaptcha> 
                 <!-- <div class="g-recaptcha" data-callback="" data-sitekey="6Ldhpl4gAAAAADLupRB5P0G3Ouc4gRN0up7tjRb5"></div>  -->
-                <button id="submit" type="submit" :disabled='isDisabled' class="form_btn_submit">Enviar</button>
+                <button id="submit" type="submit" @click="addFormToFirebase" :disabled='isDisabled' class="form_btn_submit">Enviar</button>
             </div>
+            
         </form>
 </template>
 
 <script>
 import vueRecaptcha from 'vue3-recaptcha2';
 import emailjs from '@emailjs/browser';
+import { db } from "../firebase"
+import { addDoc, collection } from "firebase/firestore";
+
 
 export default {
     name: "ContactForm",
@@ -57,12 +61,14 @@ export default {
             showRecaptcha: true, // Recaptcha
             isDisabled: true, // Button
             //FormInputs
-            contact_type: null,
-            name: null,
-            company: null,
-            email: null,
-            telephone: null,
-            message: null
+            form:{
+                contact_type: null,
+                name: null,
+                company: null,
+                email: null,
+                telephone: null,
+                message: null
+            },  
         }
     },
     methods:{
@@ -84,16 +90,17 @@ export default {
             emailjs.sendForm('gmailMessage', 'template_2op1aeg', this.$refs.form, 'xNtG_SbKBGU8Rc89D')
                 .then(() => {
                     window.alert('Formulário Enviado com Sucesso !!')
+                    this.addFormToFirebase()
                 }, () => {
-                    console.log('Ops..Ocorreu um erro ao enviar o formulário, tente novamente.')
+                    window.alert('Ops..Ocorreu um erro ao enviar o formulário, tente novamente.')
                 });
-                this.contact_type = null,
-                this.name = null,
-                this.company = null,
-                this.email = null,
-                this.telephone = null,
-                this.message = null
+                for(let item in this.form){
+                    this.form[item] = null
+                }
                 this.$refs.form.reset();
+        },
+       async addFormToFirebase(){
+            await addDoc(collection(db,'thaynara-form'),{...this.form});
         }
     }
 }
