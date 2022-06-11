@@ -1,27 +1,29 @@
 <template>
-    <form class="contact_page_form" id="contact_page_form" action="?" method="POST">
-            <label class="select_type_label" for="typeContact">Seu contato é relacionado a:</label>
-            <select v-model="selected" class="select_type" id="typeContact" name="typeContact">
+    <form class="contact_page_form" ref="form" @submit.prevent="sendEmail">
+
+
+            <label class="contact_type_label" for="contact_type">Seu contato é relacionado a:</label>
+            <select class="contact_type" name="contact_type" v-model="contact_type">
                 <option value="imprensa">Imprensa</option>
                 <option value="divulgacao">Divulgação</option>
                 <option value="parceria">Parceria</option>
             </select>
 
 
-            <input class="input_name" type="text" id="name" name="name" placeholder="Nome" required>
+            <input class="input_name" type="text" id="name" name="name" v-model="name" placeholder="Nome" required>
 
             
-            <input class="input_company" type="text" id="company" name="company" placeholder="Empresa" required>
+            <input class="input_company" type="text" id="company" name="company" v-model="company" placeholder="Empresa" required>
 
             
-            <input class="input_email" type="email" id="email" name="email" placeholder="E-mail" required>
+            <input class="input_email" type="email" id="email" name="email" v-model="email" placeholder="E-mail" required>
 
             
-            <input class="input_telephone" type="number" id="telephone" name="telephone" placeholder="Telefone" required>
+            <input class="input_telephone" type="number" id="telephone" name="telephone" v-model="telephone"  placeholder="Telefone" required>
           
 
-            <label class="label_subject" for="subject">Mensagem</label>
-            <textarea class="textarea_subject" id="subject" name="subject" placeholder="Digite aqui.." required></textarea>
+            <label class="label_message" for="message">Mensagem</label>
+            <textarea class="textarea_message" id="message" name="message" v-model="message" placeholder="Digite aqui.." required></textarea>
 
             <div class="form_submit">
                 <vueRecaptcha
@@ -38,21 +40,29 @@
                 <!-- <div class="g-recaptcha" data-callback="" data-sitekey="6Ldhpl4gAAAAADLupRB5P0G3Ouc4gRN0up7tjRb5"></div>  -->
                 <button id="submit" type="submit" :disabled='isDisabled' class="form_btn_submit">Enviar</button>
             </div>
-                
         </form>
 </template>
 
 <script>
 import vueRecaptcha from 'vue3-recaptcha2';
+import emailjs from '@emailjs/browser';
+
 export default {
     name: "ContactForm",
     components:{
-        vueRecaptcha 
+        vueRecaptcha,
     },
     data(){
         return{
-            showRecaptcha: true,
-            isDisabled: true
+            showRecaptcha: true, // Recaptcha
+            isDisabled: true, // Button
+            //FormInputs
+            contact_type: null,
+            name: null,
+            company: null,
+            email: null,
+            telephone: null,
+            message: null
         }
     },
     methods:{
@@ -69,6 +79,21 @@ export default {
         },
         recaptchaFailed(){
             this.isDisabled = true;
+        },
+        sendEmail() {
+            emailjs.sendForm('gmailMessage', 'template_2op1aeg', this.$refs.form, 'xNtG_SbKBGU8Rc89D')
+                .then(() => {
+                    window.alert('Formulário Enviado com Sucesso !!')
+                }, () => {
+                    console.log('Ops..Ocorreu um erro ao enviar o formulário, tente novamente.')
+                });
+                this.contact_type = null,
+                this.name = null,
+                this.company = null,
+                this.email = null,
+                this.telephone = null,
+                this.message = null
+                this.$refs.form.reset();
         }
     }
 }
@@ -101,7 +126,7 @@ input::placeholder{
     font-size: 1rem;
     font-weight: var(--font-light);
 }
-.select_type{
+.contact_type{
     font-family: "Poppins", Helvetica, Arial, sans-serif;
     padding: 15px;
     border-color: var(--terciary-color);
@@ -121,7 +146,7 @@ input::placeholder{
 }
 
 
-.label_subject{
+.label_message{
     padding-top: 30px;      
 }
 
@@ -135,7 +160,7 @@ input[type=number]{
     -moz-appearance: textfield;
 }
 
-.textarea_subject{
+.textarea_message{
     border-color: var(--terciary-color);
     resize: none;
     padding: 10px;
