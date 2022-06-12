@@ -59,7 +59,7 @@ export default {
     data(){
         return{
             showRecaptcha: true, // Recaptcha
-            isDisabled: true, // Button
+            isDisabled: false, // Button
             //FormInputs
             form:{
                 contact_type: null,
@@ -91,12 +91,13 @@ export default {
                 .then(() => {
                     window.alert('Formulário Enviado com Sucesso !!')
                     this.addFormToFirebase()
+                    for(let item in this.form){
+                    this.form[item] = null //reseta os campos do form
+                     }
                 }, () => {
                     window.alert('Ops..Ocorreu um erro ao enviar o formulário, tente novamente.')
                 });
-                for(let item in this.form){
-                    this.form[item] = null //reseta os campos do form
-                }
+                
                 this.$refs.form.reset(); //limpa os campos visualmente
         },
        async addFormToFirebase(){
