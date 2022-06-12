@@ -2,31 +2,31 @@
     <nav class="navBar">
             <ul class="navBar_list">
                 <li class="navBar_list_item">
-                    <router-link to="/sobre">Sobre</router-link>
+                    <router-link :to="{ name: 'whitepage', params: { name: 'sobre' }}">Sobre</router-link>
                 </li>
                 <li class="navBar_list_item">
-                    <router-link to="/novidades">Novidades</router-link>
+                    <router-link :to="{ name: 'whitepage', params: { name: 'novidades' }}">Novidades</router-link>
                 </li>
                 <li class="navBar_list_item">
-                    <router-link to="/agenda">Agenda</router-link>
+                    <router-link :to="{ name: 'whitepage', params: { name: 'agenda' }}">Agenda</router-link>
                 </li>
                 <li class="navBar_list_item">
-                    <router-link to="/thay-e-unicef">Thay e Unicef</router-link>
+                    <router-link :to="{ name: 'whitepage', params: { name: 'thay-e-unicef' }}">Thay e Unicef</router-link>
                 </li>
                 <li class="navBar_list_item">
-                    <router-link to="/galeria">Galeria</router-link>
+                    <router-link :to="{ name: 'whitepage', params: { name: 'galeria' }}">Galeria</router-link>
                 </li>
                 <li class="navBar_list_item">
-                    <router-link to="/sao-joao-da-thay">São João da Thay</router-link>
+                    <router-link :to="{ name: 'whitepage', params: { name: 'sao-joao-da-thay' }}">São João da Thay</router-link>
                 </li>
                 <li class="navBar_list_item">
-                    <router-link to="/">Contato</router-link>
+                    <router-link :to="{ name: 'contato', params: { name: 'contato' }}">Contato</router-link>
                 </li>
                 <li class="navBar_list_item">
-                    <router-link to="/imprensa">Imprensa</router-link>
+                    <router-link :to="{ name: 'whitepage', params: { name: 'imprensa' }}">Imprensa</router-link>
                 </li>
                 <li class="navBar_list_item">
-                    <router-link to="/fa-clubes">Fã-Clubes</router-link>
+                    <router-link :to="{ name: 'whitepage', params: { name: 'fa-clubes' }}">Fã-Clubes</router-link>
                 </li>
             </ul>
         </nav>

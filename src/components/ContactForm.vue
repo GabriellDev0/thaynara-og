@@ -47,7 +47,7 @@
 <script>
 import vueRecaptcha from 'vue3-recaptcha2';
 import emailjs from '@emailjs/browser';
-import { db } from "../firebase"
+import { db } from "../firebase/index"
 import { addDoc, collection } from "firebase/firestore";
 
 
@@ -95,9 +95,9 @@ export default {
                     window.alert('Ops..Ocorreu um erro ao enviar o formulário, tente novamente.')
                 });
                 for(let item in this.form){
-                    this.form[item] = null
+                    this.form[item] = null //reseta os campos do form
                 }
-                this.$refs.form.reset();
+                this.$refs.form.reset(); //limpa os campos visualmente
         },
        async addFormToFirebase(){
             await addDoc(collection(db,'thaynara-form'),{...this.form});
