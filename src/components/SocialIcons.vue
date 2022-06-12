@@ -1,22 +1,22 @@
 <template>
     <ul class='social-icons'>
-                <li :style="{'backgroundColor' : colorIcons}" class="instagram" aria-label="Link para o Instagram">
-                    <a href="#"></a>
+                <li :style="{'backgroundColor' : colorIcons}" class="instagram">
+                    <a href="#" aria-label="Link para o Instagram"></a>
                 </li>
-                <li :style="{'backgroundColor' : colorIcons}" class="youtube" aria-label="Link para o Youtube">
-                    <a href="#"></a>
+                <li :style="{'backgroundColor' : colorIcons}" class="youtube" >
+                    <a href="#" aria-label="Link para o Youtube"></a>
                 </li>
-                <li :style="{'backgroundColor' : colorIcons}" class="twitter" aria-label="Link para o Twitter">
-                    <a href="#"></a>
+                <li :style="{'backgroundColor' : colorIcons}" class="twitter" >
+                    <a href="#" aria-label="Link para o Twitter"></a>
                 </li>
-                <li :style="{'backgroundColor' : colorIcons}" class="facebook" aria-label="Link para o Facebook">
-                    <a href="#"></a>
+                <li :style="{'backgroundColor' : colorIcons}" class="facebook" >
+                    <a href="#" aria-label="Link para o Facebook"></a>
                 </li>
-                <li :style="{'backgroundColor' : colorIcons}" class="snapchat" aria-label="Link para o SnapChat">
-                    <a href="#"></a>
+                <li :style="{'backgroundColor' : colorIcons}" class="snapchat" >
+                    <a href="#" aria-label="Link para o SnapChat"></a>
                 </li>
-                <li :style="{'backgroundColor' : colorIcons}" class="tiktok" aria-label="Link para o TikTok">
-                    <a href="#"></a>
+                <li :style="{'backgroundColor' : colorIcons}" class="tiktok" >
+                    <a href="#" aria-label="Link para o TikTok"></a>
                 </li>
             </ul>
 </template>
