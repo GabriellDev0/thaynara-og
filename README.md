@@ -10,6 +10,7 @@
 * [Descrição do Projeto](#descrição-do-projeto)
 * [Status do Projeto](#status-do-Projeto)
 * [Funcionalidades e Demonstração da Aplicação](#funcionalidades-e-demonstração-da-aplicação)
+* [Estrutura GitHub](#estrutura-github)
 * [Acesso ao Projeto](#acesso-ao-projeto)
 * [Tecnologias utilizadas](#tecnologias-utilizadas)
 * [Conclusão](#conclusão)
@@ -33,6 +34,23 @@ Esse projeto é um site institucional feito de forma fictícia para Thaynara-OG,
 	![mensagem_para_thay](https://user-images.githubusercontent.com/101679780/173464965-9b72fd9a-2a0c-42df-ba2e-1e41ea50d7bb.png)
 - **`Funcionalidade 3`: Página de autenticação /admin, onde irá administrar todos os forms recebidos.**
 	![admin_dashboard](https://user-images.githubusercontent.com/101679780/173465213-20af1ecd-0ebf-459a-9a20-5984946ca4af.gif)
+	
+	
+## 🌝 Estrutura no Github
+**A estrutura do projeto no GitHub funciona básicamente assim:
+	<ul>
+		<li>1 - Tenho 2 Branchs, uma Production e a outra Develop.</li>
+		<li>2 - Eu crio uma branch a partir da develop seja ela uma feature ou um fix/bug</li>
+		<li>3 - Após resolvido, faço merge pra develop e na develop efetuo testes, caso ok?</li>
+		<li>4 - Eu dou push para production</li>
+		<li>5 - Quando eu dou push para production, acontece um GATILHO no GITHUB ACTIONS.</li>
+		<li>6 - GitHub Actions roda um código onde ele faz deploy automaticamente para o FireBase</li>
+	</ul>
+		Obs: Ou seja, consigo fazer deploy da aplicação de qualquer lugar :moon:**
+	![Production](https://user-images.githubusercontent.com/101679780/173465840-ac8a3847-5d09-4174-8ad6-0b1331bb78b6.png)
+
+
+
 ## 📁 Acesso ao projeto
 
 **Você pode acessar o código fonte do projeto clicando aqui <a>https://github.com/GabriellDev0/thaynara-og</a> ou baixa-lo <a>https://github.com/GabriellDev0/thaynara-og/archive/refs/heads/production.zip</a>**
