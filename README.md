@@ -12,9 +12,6 @@
 * [Funcionalidades e Demonstração da Aplicação](#funcionalidades-e-demonstração-da-aplicação)
 * [Acesso ao Projeto](#acesso-ao-projeto)
 * [Tecnologias utilizadas](#tecnologias-utilizadas)
-* [Pessoas Contribuidoras](#pessoas-contribuidoras)
-* [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras)
-* [Licença](#licença)
 * [Conclusão](#conclusão)
 
 ## Descricao do Projeto
@@ -25,7 +22,7 @@ Esse projeto é um site institucional feito de forma fictícia para Thaynara-OG,
     ✔️Projeto Concluído ✔️
 </h4>
 
-## :hammer: Funcionalidades do projeto
+## :hammer: Funcionalidades do projeto e Demonstração da Aplicação
 
 - `Funcionalidade 1`: Salva os Contacts Forms enviados ao banco de dados da Firebase.
 - `Funcionalidade 2`: Envia e-mails de confirmação de recebimento de e-mail.
@@ -41,15 +38,26 @@ Esse projeto é um site institucional feito de forma fictícia para Thaynara-OG,
 **Após baixar o projeto, você pode abrir com o Visual Studio Code. Para isso, na tela de launcher clique em:**
     <ul>
         <li>Abrir projeto existente ( ou algum similar )</li>
-        <li>Procure o local onde o projeto está e o selecione ( Caso o projeto seja baixado via zip, é necessário extraí-lo antes de procurá-lo )
+        <li>Procure o local onde o projeto está e o selecione ( Caso o projeto seja baixado via zip, é necessário extraí-lo antes de procurá-lo )</li>
         <li>Por fim clique OK</li>
         <li>Abra o terminal em "Terminal" -> "New Terminal" e execute o comando **npm install**</li>
     </ul>
     
- ## 👨‍💻 Tecnologias Utilizadas
-    <ul>
-        <li>Abrir projeto existente ( ou algum similar )</li>
-        <li>Procure o local onde o projeto está e o selecione ( Caso o projeto seja baixado via zip, é necessário extraí-lo antes de procurá-lo )
-        <li>Por fim clique OK</li>
-        <li>Abra o terminal em "Terminal" -> "New Terminal" e execute o comando **npm install**</li>
-    </ul>
+## 👨‍💻 Tecnologias Utilizadas
+    - Vue 3
+    - Firebase
+
+## 📚 Bibliotecas Utilizadas
+    - https://www.npmjs.com/package/vue3-recaptcha2/v/1.7.0
+	- npm install vue3-recaptcha2
+
+	- https://www.emailjs.com/
+	- npm install @emailjs/browser --save
+
+	-npm install firebase
+	
+	https://mdbootstrap.com/docs/standard/getting-started/installation/
+	-npm i mdb-ui-kit
+
+## ㊗️ Conclusão
+    Aprendi bastante coisa nesse projeto, cometi vários erros, poderia ter melhorado muito mais o projeto e deixado ele 100%, algumas coisas estão incompletas como     100% Responsive layout, 100% lighthouse google, entre outras coisas...Mas infelizmente meu tempo acabou. Enfim, este projeto foi muito bom para meu aprendizado no Geral.
