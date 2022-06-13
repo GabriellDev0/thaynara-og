@@ -59,7 +59,7 @@ export default {
     data(){
         return{
             showRecaptcha: true, // Recaptcha
-            isDisabled: false, // Button
+            isDisabled: true, // Button
             //FormInputs
             form:{
                 contact_type: null,
