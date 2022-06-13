@@ -1,6 +1,6 @@
 <template>
     <main class="contact_page">
-      <img width="373" height="722" class="header_picture_thay" src="@/assets/contato-foto.jpg" alt="Imagem da Thaynara bem vestida sentada em uma calçada mostrando todo o seu look com o cotovelo apoiado no joelho e a mão apoiada no queixo">
+      <img width="373" height="722" class="contact_picture_thay" src="@/assets/contato-foto.jpg" alt="Imagem da Thaynara bem vestida sentada em uma calçada mostrando todo o seu look com o cotovelo apoiado no joelho e a mão apoiada no queixo">
         <div class="contact_page_text">
             <img class="contact_page_text_1" width="802" height="440" src="@/assets/contato1.svg" alt="Texto contato na cor rosa.">
             <img class="contact_page_text_2" width="802" height="440" src="@/assets/contato2.svg" alt="Texto contato na cor rosa">
@@ -30,7 +30,7 @@ export default {
     gap: 40px;
 }
 
-.header_picture_thay{
+.contact_picture_thay{
   position: absolute;
   top: 0px;
   left: 300px;
@@ -59,7 +59,7 @@ export default {
 
 @media (max-width: 1600px){
 
-    .header_picture_thay{
+    .contact_picture_thay{
       left: 300px;
       max-width: 373px;
       max-height:722px;
@@ -79,6 +79,66 @@ export default {
       margin-right: 250px;
   }
 
+}
+
+@media (max-width: 1500px){
+    .contact_page{
+        align-items: center;
+    }
+    .contact_picture_thay{
+      display: none;
+  }
+    .contact_page_text_1,
+    .contact_page_text_2{
+      left: 10px;
+      top: 60px;
+      width: 600px;
+      height: 300px;
+  }
+
+    .contact_page_text{
+      /* background-color: red; */
+      width: 600px;
+      height: 600px;
+      margin-right: 0px;
+  }
+
+}
+
+@media (max-width: 1320px){
+
+    .contact_page_text_1,
+    .contact_page_text_2{
+      left: 10px;
+      top: 60px;
+      width: 400px;
+      height: 300px;
+  }
+
+    .contact_page_text{
+      /* background-color: red; */
+      width: 400px;
+      height: 600px;
+      margin-right: 0px;
+  }
+}
+
+@media (max-width: 1020px){
+    .contact_page_text{
+        height: 0px;
+    }
+    .contact_page{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        
+    }
+    .contact_page_text_1,
+    .contact_page_text_2{
+      left: 60px;
+      top: -80px;
+      width: 200px;
+      height: 200px;
+  }
 }
 
 </style>

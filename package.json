@@ -14,7 +14,6 @@
     "firebase": "^9.8.3",
     "mdb-ui-kit": "^4.1.0",
     "vue": "^3.2.13",
-    "vue-recaptcha": "^2.0.2",
     "vue-router": "^4.0.3",
     "vue3-recaptcha2": "^1.7.0",
     "vuex": "^4.0.2"

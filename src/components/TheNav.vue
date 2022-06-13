@@ -1,6 +1,6 @@
 <template>
     <nav class="navBar">
-            <ul class="navBar_list">
+            <ul class="navBar_list" :style="mobile">
                 <li class="navBar_list_item">
                     <router-link :to="{ name: 'whitepage', params: { name: 'sobre' }}">Sobre</router-link>
                 </li>
@@ -34,11 +34,19 @@
 
 <script>
 export default {
-    Name: "TheNav"
+    Name: "TheNav",
+    data(){
+        return{
+            mobile: false
+        }
+    },
 }
 </script>
 
 <style>
+#btn-mobile{
+    display:none; 
+}
 .navBar{
     justify-self: flex-end;
     grid-column: 2;
@@ -60,5 +68,12 @@ export default {
 
 .navBar_list_item:hover{
     transform: scale(1.2);
+}
+
+@media (max-width: 700px){
+    .navBar{
+        justify-self: center;
+    }
+
 }
 </style>

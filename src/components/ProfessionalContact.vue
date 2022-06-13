@@ -71,4 +71,20 @@ export default {
 .contact_professional_email::before{
     background: url("@/assets/icon-telefone.svg") no-repeat
 }
+
+@media(max-width: 1320px){
+    .contact_professional{
+        grid-template-columns: 1fr;
+ }
+    .contact_professional_title{
+        grid-column: 1;
+    }
+    .contact_professional_email{
+        justify-self: start;
+        margin-left: 30px;
+    }
+    .contact_professional_phone{
+        margin-left: 30px;
+    }
+}
 </style>

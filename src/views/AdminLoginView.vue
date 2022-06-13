@@ -16,14 +16,16 @@
                         <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
 
                         <div class="form-outline mb-4">
-                        <input type="email" id="form2Example18" class="form-control form-control-lg" v-model="login_form.email" required />
-                        <label class="form-label" for="form2Example18">Email address</label>
+                            <label for="form12">Email address</label>
+                            <input v-on:keyup.enter="login"  type="email" id="form12" class="form-control" v-model="login_form.email" required />  
                         </div>
 
                         <div class="form-outline mb-4">
-                        <input type="password" id="form2Example28" class="form-control form-control-lg" v-model="login_form.password" required />
-                        <label class="form-label" for="form2Example28">Password</label>
+                            <label  for="form2Example28">Password</label>
+                            <input v-on:keyup.enter="login" type="password" id="form12" class="form-control form-control-lg" v-model="login_form.password" required />
                         </div>
+
+                        
 
                         <div class="pt-1 mb-4">
                         <button class="btn btn-info btn-lg btn-block" type="button" @click.prevent="login">Login</button>
