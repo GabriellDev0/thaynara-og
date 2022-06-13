@@ -16,3 +16,18 @@
 * [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras)
 * [Licença](#licença)
 * [Conclusão](#conclusão)
+
+## Descricao do Projeto
+Esse projeto é um site institucional feito de forma fictícia para Thaynara-OG, de uma forma resumida é uma página de contato, onde pessoas podem entrar em contato com a equipe da Thaynara para desenvolver diversos assuntos.
+
+## Status do Projeto
+<h4 align="center"> 
+    ✔️Projeto Concluído ✔️
+</h4>
+
+## :hammer: Funcionalidades do projeto
+
+- `Funcionalidade 1`: Salva os Contacts Forms enviados ao banco de dados da Firebase.
+- `Funcionalidade 2`: Envia e-mails de confirmação de recebimento de e-mail.
+- `Funcionalidade 2a`: Recebe e-mail dos forms.
+- `Funcionalidade 3`: Página de autenticação /admin, onde irá administrar todos os forms recebidos.
