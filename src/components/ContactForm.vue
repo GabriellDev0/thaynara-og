@@ -4,9 +4,9 @@
 
             <label class="contact_type_label" for="contact_type">Seu contato é relacionado a:</label>
             <select class="contact_type" name="contact_type" v-model="form.contact_type">
-                <option value="imprensa">Imprensa</option>
-                <option value="divulgacao">Divulgação</option>
-                <option value="parceria">Parceria</option>
+                <option value="Imprensa">Imprensa</option>
+                <option value="Divulgacao">Divulgação</option>
+                <option value="Parceria">Parceria</option>
             </select>
 
 
