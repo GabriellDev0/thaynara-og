@@ -4,6 +4,7 @@ import ContactView from '../views/ContactView.vue'
 import AdminLoginView from '@/views/AdminLoginView.vue'
 import TheWhitePage from '@/views/TheWhitePage.vue'
 import AdminDashBoardView from '@/views/AdminDashBoardView.vue'
+import AdminMessageView from '@/views/AdminMessageView.vue'
 import { auth } from "../firebase/index"
 
 const routes = [
@@ -36,7 +37,15 @@ const routes = [
     component: AdminDashBoardView,
     meta:{
       requiresAuth: true
-    }
+    },
+    children:[
+      {
+        path: 'mensagem/:idCollection',
+        name: 'mensagem',
+        component: AdminMessageView,
+        props: true
+      }
+    ]
   },
 ]
 
