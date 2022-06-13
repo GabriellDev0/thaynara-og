@@ -31,3 +31,17 @@ Esse projeto é um site institucional feito de forma fictícia para Thaynara-OG,
 - `Funcionalidade 2`: Envia e-mails de confirmação de recebimento de e-mail.
 - `Funcionalidade 2a`: Recebe e-mail dos forms.
 - `Funcionalidade 3`: Página de autenticação /admin, onde irá administrar todos os forms recebidos.
+
+## 📁 Acesso ao projeto
+
+**Você pode acessar o código fonte do projeto clicando aqui <a>https://github.com/GabriellDev0/thaynara-og</a> ou baixa-lo <a>https://github.com/GabriellDev0/thaynara-og/archive/refs/heads/production.zip</a>**
+
+## 🛠️ Abrir e rodar o projeto
+
+**Após baixar o projeto, você pode abrir com o Visual Studio Code. Para isso, na tela de launcher clique em:**
+    <ul>
+        <li>Abrir projeto existente ( ou algum similar )</li>
+        <li>Procure o local onde o projeto está e o selecione ( Caso o projeto seja baixado via zip, é necessário extraí-lo antes de procurá-lo )
+        <li>Por fim clique OK</li>
+        <li>Abra o terminal em "Terminal" -> "New Terminal" e execute o comando **npm install**</li>
+    </ul>
