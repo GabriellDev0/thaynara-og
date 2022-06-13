@@ -28,9 +28,6 @@
                 <li class="navBar_list_item">
                     <router-link :to="{ name: 'whitepage', params: { name: 'fa-clubes' }}">Fã-Clubes</router-link>
                 </li>
-                <li class="navBar_list_item">
-                    <router-link :to="{ name: 'admin', params: { name: 'admin' }}">Admin</router-link>
-                </li>
             </ul>
         </nav>
 </template>

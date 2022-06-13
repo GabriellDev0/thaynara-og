@@ -11,12 +11,21 @@ import { getAuth } from "firebase/auth";
     appId: "1:172353495284:web:b7b8ff1cecd069642e7ea1"
   };
 
+  const authInit = () =>{
+    return new Promise((resolve)=>{
+      const unsubscribe = auth.onAuthStateChanged(() =>{
+        unsubscribe();
+        resolve();
+      }, console.error)
+    })
+  }
+
   const app = initializeApp(firebaseConfig);
   
   const db = getFirestore(app)
 
   const auth = getAuth(app);
 
-  export { db, auth }
+  export { db, auth, authInit }
 
 
