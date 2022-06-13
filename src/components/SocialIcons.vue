@@ -33,6 +33,15 @@ export default {
   display: flex;
   gap: 10px;
 }
+
+.social-icons li{
+   transition: all 0.2s ease-in-out;
+}
+
+.social-icons li:hover{
+  transform: scale(1.2);
+}
+
 .instagram, 
 .youtube,
 .twitter,

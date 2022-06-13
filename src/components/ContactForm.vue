@@ -213,4 +213,21 @@ input[type=number]{
     right: 15px;
 }
 
+@media (max-width: 1600px){
+   .contact_page_form{
+        max-width: 400px;
+   } 
+   .form_submit{
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+   }
+}
+
+@media (max-width: 1500px){
+   .contact_page_form{
+        max-width: 400px;
+   }
+}
+
 </style>
