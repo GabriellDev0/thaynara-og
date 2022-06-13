@@ -76,4 +76,4 @@ Esse projeto é um site institucional feito de forma fictícia para Thaynara-OG,
 	</ul>
 
 ## ㊗️ Conclusão
-    Aprendi bastante coisa nesse projeto, cometi vários erros, poderia ter melhorado muito mais o projeto e deixado ele 100%, algumas coisas estão incompletas como     100% Responsive layout, 100% lighthouse google, entre outras coisas...Mas infelizmente meu tempo acabou. Enfim, este projeto foi muito bom para meu aprendizado no Geral.
+   **Aprendi bastante coisa nesse projeto, cometi vários erros, poderia ter melhorado muito mais o projeto e deixado ele 100%, algumas coisas estão incompletas como     100% Responsive layout, 100% lighthouse google, entre outras coisas...Mas infelizmente meu tempo acabou. Enfim, este projeto foi muito bom para meu aprendizado no Geral.**
