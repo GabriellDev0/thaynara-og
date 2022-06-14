@@ -36,7 +36,7 @@ Esse projeto é um site institucional feito de forma fictícia para Thaynara-OG,
 	![admin_dashboard](https://user-images.githubusercontent.com/101679780/173465213-20af1ecd-0ebf-459a-9a20-5984946ca4af.gif)
 	
 	
-## 🌝 Estrutura no Github
+## 🌝 Estrutura Github
 **A estrutura do projeto no GitHub funciona básicamente assim:
 	<ul>
 		<li>1 - Tenho 2 Branchs, uma Production e a outra Develop.</li>
