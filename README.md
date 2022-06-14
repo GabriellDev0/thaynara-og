@@ -62,6 +62,7 @@ Esse projeto é um site institucional feito de forma fictícia para Thaynara-OG,
         <li>Procure o local onde o projeto está e o selecione ( Caso o projeto seja baixado via zip, é necessário extraí-lo antes de procurá-lo )</li>
         <li>Por fim clique OK</li>
         <li>Abra o terminal em "Terminal" -> "New Terminal" e execute o comando **npm install**</li>
+	<li>Inicie o servidor local com: **npm run serve**</li>
     </ul>
     
 ## 👨‍💻 Tecnologias Utilizadas
